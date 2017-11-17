@@ -1,0 +1,7 @@
+<h1>"<%= @sentence %>"</h1>
+
+<% if @classified_lang.downcase != (params[:language] || @classified_lang) %>
+  <h2 class='alert alert-danger'><%= @classified_lang %></h2>
+<% else %>
+  <h2 class='alert alert-info'><%= @classified_lang %></h2>
+<% end %>
